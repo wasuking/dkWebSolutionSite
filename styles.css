@@ -16,7 +16,7 @@
   --radius-lg: 28px;
   --shadow-sm: 0 10px 30px rgba(11, 18, 32, 0.08);
   --shadow-lg: 0 32px 80px rgba(11, 18, 32, 0.18);
-  --container: 1180px;
+  --page-gutter: clamp(1rem, 3.5vw, 4.5rem);
   --section-space: clamp(5rem, 9vw, 8.5rem);
 }
 
@@ -75,7 +75,7 @@ svg {
 }
 
 .container {
-  width: min(calc(100% - 2rem), var(--container));
+  width: calc(100% - (var(--page-gutter) * 2));
   margin-inline: auto;
 }
 
@@ -276,14 +276,7 @@ svg {
 }
 
 .hero-glow {
-  position: absolute;
-  top: 4%;
-  left: 54%;
-  width: 520px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: rgba(37, 99, 235, 0.22);
-  filter: blur(130px);
+  display: none;
 }
 
 .hero-grid {
@@ -375,8 +368,8 @@ h2 em {
 
 .hero-visual {
   position: relative;
-  width: min(100%, 680px);
-  margin-inline: auto;
+  width: 100%;
+  margin-left: auto;
 }
 
 .browser-card {
@@ -1441,12 +1434,12 @@ h2 em {
   }
 
   .hero-grid {
-    grid-template-columns: 0.88fr 1.12fr;
-    gap: 2.5rem;
+    grid-template-columns: minmax(420px, 0.84fr) minmax(0, 1.16fr);
+    gap: clamp(2.5rem, 4vw, 5rem);
   }
 
   .hero h1 {
-    font-size: clamp(3.25rem, 5.2vw, 4.75rem);
+    font-size: clamp(3.25rem, 4.6vw, 5.2rem);
   }
 
   .mobile-card {
@@ -1552,8 +1545,8 @@ h2 em {
   }
 
   .offer-grid {
-    grid-template-columns: 1fr 0.82fr;
-    gap: 6rem;
+    grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.72fr);
+    gap: clamp(5rem, 10vw, 12rem);
   }
 
   .check-list {
@@ -1574,14 +1567,15 @@ h2 em {
   }
 
   .why-grid {
-    grid-template-columns: 1fr 0.9fr;
+    grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.72fr);
     align-items: start;
+    gap: clamp(5rem, 10vw, 12rem);
   }
 
   .contact-grid {
-    grid-template-columns: 0.82fr 1fr;
+    grid-template-columns: minmax(360px, 0.78fr) minmax(0, 1.08fr);
     align-items: start;
-    gap: 5rem;
+    gap: clamp(5rem, 9vw, 11rem);
   }
 
   .footer-top nav {
@@ -1590,16 +1584,26 @@ h2 em {
 }
 
 @media (min-width: 1100px) {
-  .container {
-    width: min(calc(100% - 4rem), var(--container));
-  }
-
   .hero-visual {
-    transform: translateX(1.5rem);
+    transform: none;
   }
 
   .value-card {
-    padding: 2.2rem;
+    min-height: 330px;
+    padding: clamp(2.2rem, 3vw, 3.5rem);
+  }
+
+  .value-grid {
+    gap: clamp(1rem, 2vw, 2.25rem);
+  }
+
+  .section-heading {
+    max-width: 760px;
+  }
+
+  .price-card {
+    justify-self: end;
+    width: min(100%, 520px);
   }
 
   .showcase-nav {
