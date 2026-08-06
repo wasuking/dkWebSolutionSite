@@ -89,3 +89,47 @@ if (prefersReducedMotion || !("IntersectionObserver" in window)) {
 
   revealElements.forEach((element) => revealObserver.observe(element));
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("consultation-form");
+  const submitButton = document.getElementById("submit-button");
+  const formStatus = document.getElementById("form-status");
+
+  if (!form || !submitButton || !formStatus) {
+    console.error("Consultation form elements could not be found.");
+    return;
+  }
+
+  emailjs.init({
+    publicKey: "nmBcNSRvPqW8f4WiG",
+  });
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+    formStatus.textContent = "";
+
+    try {
+      await emailjs.sendForm(
+        "service_9brx03s",
+        "template_8w7hzp9",
+        form
+      );
+
+      formStatus.textContent =
+        "Your consultation request was sent successfully.";
+
+      form.reset();
+    } catch (error) {
+      console.error("EmailJS submission failed:", error);
+
+      formStatus.textContent =
+        "Something went wrong. Please call or email us directly.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Request a Consultation";
+    }
+  });
+});
