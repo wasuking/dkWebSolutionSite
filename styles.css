@@ -577,58 +577,121 @@ a {
 
 /* Services page */
 
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 .package-section {
   color: var(--dark-text);
   background-color: var(--surface-light);
 }
 
+.package-section .eyebrow {
+  color: #85466f;
+}
+
+.package-section .section-heading > p:last-child {
+  color: #624a5b;
+}
+
 .package-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 2rem;
 }
 
-.package-copy h2 {
-  margin-bottom: 1.5rem;
-}
-
-.package-copy p {
-  margin-bottom: 2rem;
-}
-
-.package-card {
+.package-card,
+.retainer-card {
+  display: flex;
+  flex-direction: column;
   padding: 3rem;
-  color: var(--text);
-  background-color: var(--surface);
   border: 1px solid var(--border);
 }
 
-.package-price {
-  margin: 2rem 0;
-  font-size: 60px;
+.package-card {
+  color: var(--text);
+  background-color: var(--surface);
 }
 
-.package-card .button {
+.retainer-card {
+  background-color: var(--background);
+}
+
+.package-card h3,
+.retainer-card h3 {
+  margin-bottom: 1rem;
+}
+
+.package-price {
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 48px;
+  line-height: 1;
+}
+
+.package-price span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.package-card > p:not(.eyebrow):not(.package-price),
+.retainer-card > p:not(.eyebrow):not(.package-price) {
+  margin-bottom: 1.5rem;
+  color: var(--muted-text);
+}
+
+.check-list {
+  margin-bottom: 2rem;
+}
+
+.check-list li::before {
+  content: "✓";
+  margin-right: 0.6rem;
+  color: var(--accent);
+}
+
+.payment-details {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.payment-details p {
+  margin-bottom: 0.5rem;
+}
+
+.package-card .button,
+.retainer-card .button {
   margin-top: 2rem;
 }
 
-.package-card small {
-  display: block;
-  margin-top: 1rem;
-  color: var(--muted-text);
+.retainer-section {
+  background-color: var(--surface);
 }
 
-.narrow-content {
-  max-width: 800px;
+.retainer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 
-.narrow-content h2 {
+.custom-package {
+  max-width: 850px;
+}
+
+.custom-package h2 {
   margin-bottom: 1.5rem;
 }
 
-.narrow-content p {
+.custom-package p {
   margin-bottom: 1rem;
   color: var(--muted-text);
+}
+
+.custom-package .button {
+  margin-top: 1rem;
 }
 
 
@@ -778,6 +841,8 @@ textarea {
   }
 
   .package-grid,
+  .retainer-grid,
+  .services-grid,
   .demo-details,
   .contact-layout,
   .form-grid {
@@ -794,7 +859,8 @@ textarea {
   }
 
   .contact-form,
-  .package-card {
+  .package-card,
+  .retainer-card {
     padding: 2rem;
   }
 }
