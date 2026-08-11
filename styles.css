@@ -330,6 +330,7 @@ a {
 .work-details ul,
 .check-list {
   padding-left: 1.2rem;
+  list-style: none;
 }
 
 .service-card li,
@@ -400,20 +401,28 @@ a {
   margin-bottom: 2rem;
 }
 
-.pricing-copy > p:not(.eyebrow) {
-  max-width: 650px;
-  margin: 1.5rem 0 2rem;
+.pricing-section {
+  color: var(--dark-text);
+  background-color: var(--surface-light);
+}
+
+.pricing-section .eyebrow {
+  color: #85466f;
+}
+
+.pricing-section .section-heading > p:last-child {
   color: #624a5b;
-  font-size: 18px;
 }
 
-.check-list {
-  list-style: none;
-  padding-left: 0;
+.pricing-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
-.price-card,
-.contact-card {
+.price-card {
+  display: flex;
+  flex-direction: column;
   padding: 3rem;
   color: var(--text);
   background-color: var(--surface);
@@ -431,29 +440,67 @@ a {
 }
 
 .price-card h3 {
-  margin: 3rem 0 2rem;
-  font-size: 42px;
+  min-height: 90px;
+  margin: 2rem 0 1rem;
+  font-size: 38px;
 }
 
-.price-label {
-  color: var(--muted-text);
-}
-
-.price {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 68px;
+.price-card .price {
+  color: var(--text);
+  font-size: 60px;
   line-height: 1;
 }
 
-.payment {
-  margin: 1rem 0 2rem;
-  color: var(--accent);
+.price-description {
+  margin: 1.5rem 0;
+  color: var(--muted-text);
 }
 
-.price-card small {
-  display: block;
+.price-card .check-list {
+  margin-bottom: 2rem;
+}
+
+.price-card .payment {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  color: var(--accent);
+  border-top: 1px solid var(--border);
+}
+
+.price-card .button {
   margin-top: 1.5rem;
-  color: var(--muted-text);
+}
+
+.pricing-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #b68fa9;
+}
+
+.pricing-footer .text-link {
+  color: var(--dark-text);
+}
+
+@media (max-width: 850px) {
+  .pricing-options {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card {
+    padding: 2rem;
+  }
+
+  .price-card h3 {
+    min-height: auto;
+  }
+
+  .pricing-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .process-card p {
