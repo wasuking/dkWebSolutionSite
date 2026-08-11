@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK | Web Solution's No Demo Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+
+</head>
+<body>
+
+    <header class="site-header" id="top">
+    <div class="container nav-bar">
+      <a class="logo" href="../index.html#top">DK <span>| Web Solutions</span></a>
+
+      <button class="menu-button" id="menu-button" aria-label="Open navigation" aria-expanded="false">
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#process">Process</a>
+        <a href="../index.html#pricing">Pricing</a>
+        <a class="nav-button" href="https://calendly.com/dwasuking/30min">Book a Free Consultation</a>
+      </nav>
+    </div>
+  </header>
+   
+    <!-- Contact Hero -->
+    <section class="page-hero contact-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Let’s talk about your business.</h1>
+
+        <p class="page-intro">
+          Tell us about your business, current online presence, and what you
+          would like to improve. We will use the consultation to determine
+          whether DK Web Solutions is a good fit for your project.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Information and Form -->
+    <section class="page-section">
+      <div class="container contact-layout">
+
+        <div class="contact-information">
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Start the conversation.</h2>
+
+          <p>
+            Complete the consultation form or contact DK Web Solutions
+            directly.
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:hello@dkwebsolutions.com">
+              hello@dkwebsolutions.com
+            </a>
+
+            <a href="tel:+17039535515">
+              (703) 953-5515
+            </a>
+          </div>
+
+          <div class="expectations">
+            <h3>What to Expect</h3>
+
+            <ul>
+              <li>We discuss your business and project goals.</li>
+              <li>We determine the necessary services and deliverables.</li>
+              <li>You receive a clear project scope and price.</li>
+              <li>Projects have a $2,000 minimum.</li>
+              <li>50% is required to begin.</li>
+              <li>The remaining 50% is required before delivery.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!--
+          This form currently uses client-side validation only.
+
+          Connect the form to Formspree, Web3Forms, or a custom backend
+          before launching it for real customer submissions.
+        -->
+        <form class="contact-form" id="consultation-form" novalidate>
+          <div class="form-heading">
+            <p class="eyebrow">Free Consultation</p>
+            <h2>Tell us about your project.</h2>
+          </div>
+
+          <div class="form-grid">
+
+            <label>
+              Name <span>*</span>
+              <input
+                type="text"
+                name="name"
+                autocomplete="name"
+                required
+              >
+            </label>
+
+            <label>
+              Business name <span>*</span>
+              <input
+                type="text"
+                name="business"
+                autocomplete="organization"
+                required
+              >
+            </label>
+
+            <label>
+              Email <span>*</span>
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                required
+              >
+            </label>
+
+            <label>
+              Phone number
+              <input
+                type="tel"
+                name="phone"
+                autocomplete="tel"
+              >
+            </label>
+
+            <label class="full-field">
+              Current website URL
+              <input
+                type="url"
+                name="website"
+                placeholder="https://"
+              >
+            </label>
+
+            <label class="full-field">
+              Type of service business <span>*</span>
+
+              <select name="businessType" required>
+                <option value="" selected disabled>
+                  Select your industry
+                </option>
+                <option value="cleaning">Cleaning</option>
+                <option value="landscaping">Landscaping</option>
+                <option value="contracting">Contracting</option>
+                <option value="pressure-washing">Pressure washing</option>
+                <option value="auto-detailing">Auto detailing</option>
+                <option value="other">Other local service</option>
+              </select>
+            </label>
+
+            <label class="full-field">
+              Project details <span>*</span>
+
+              <textarea
+                name="details"
+                rows="6"
+                placeholder="Tell us what you need help with."
+                required
+              ></textarea>
+            </label>
+
+          </div>
+
+          <button class="button button-wide" type="submit">
+            Request My Consultation
+          </button>
+
+          <p
+            class="form-status"
+            id="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <a class="logo" href="#top">DK <span>| Web Solutions</span></a>
+      <nav aria-label="Footer navigation">
+        <a href="/pages/services.html">Services</a>
+        <a href="/pages/work.html">Work</a>
+        <a href="../index.html">Process</a>
+        <a href="/pages/contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="current-year"></span> DK | Web Solutions</span>
+      <span>Websites and growth systems for local service businesses.</span>
+    </div>
+  </footer>
+</body>
+</html>
