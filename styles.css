@@ -1020,6 +1020,239 @@ textarea {
   margin-top: 1rem;
 }
 
+/* Portfolio tool buttons */
+
+.tool-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-list li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tool-button {
+  display: block;
+  height: 100%;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.tool-button:hover {
+  color: var(--dark-text);
+  background-color: var(--text);
+}
+
+/* Individual tool pages */
+
+.tool-hero {
+  padding: 8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tool-hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  align-items: center;
+  gap: 6rem;
+}
+
+.tool-intro {
+  max-width: 720px;
+  margin: 2rem 0;
+  color: var(--muted-text);
+  font-size: 20px;
+}
+
+.tool-summary {
+  padding: 2.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.tool-summary h2 {
+  margin-bottom: 1.5rem;
+  font-size: 36px;
+}
+
+.tool-summary > p:last-child {
+  color: var(--muted-text);
+}
+
+.tool-section,
+.tool-cta {
+  padding: 7rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tool-section-light {
+  color: var(--dark-text);
+  background-color: var(--surface-light);
+}
+
+.tool-section-light .eyebrow {
+  color: #85466f;
+}
+
+.tool-section-light p {
+  color: #624a5b;
+}
+
+.tool-heading {
+  max-width: 780px;
+  margin-bottom: 3rem;
+}
+
+.tool-heading h2 {
+  margin-bottom: 1.5rem;
+}
+
+.tool-heading > p:last-child {
+  max-width: 680px;
+  color: var(--muted-text);
+  font-size: 18px;
+}
+
+.tool-section-light .tool-heading > p:last-child {
+  color: #624a5b;
+}
+
+.tool-content-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 6rem;
+}
+
+.tool-use-list {
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.tool-use-list li {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 1rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.tool-use-list span {
+  color: #85466f;
+  font-weight: bold;
+}
+
+.tool-use-list h3 {
+  margin-bottom: 0.5rem;
+}
+
+.credential-list,
+.tool-project-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.credential-card,
+.tool-project-card {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  border: 1px solid var(--border);
+}
+
+.credential-image,
+.tool-project-image {
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: var(--dark-text);
+  background-color: var(--surface-light);
+  text-align: center;
+}
+
+.tool-section-light .tool-project-image {
+  background-color: #dfd0d9;
+}
+
+.credential-copy,
+.tool-project-copy {
+  padding: 3rem;
+}
+
+.credential-copy h3,
+.tool-project-copy h3 {
+  margin-bottom: 1rem;
+  font-size: 34px;
+}
+
+.credential-copy > p:not(.eyebrow),
+.tool-project-copy > p:not(.eyebrow) {
+  margin-bottom: 1.5rem;
+  color: var(--muted-text);
+}
+
+.tool-section-light .tool-project-copy > p:not(.eyebrow) {
+  color: #624a5b;
+}
+
+.related-tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.related-tool {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  text-decoration: none;
+}
+
+.related-tool span {
+  color: var(--muted-text);
+}
+
+.related-tool strong {
+  font-size: 26px;
+}
+
+.related-tool:hover {
+  color: var(--dark-text);
+  background-color: var(--text);
+}
+
+.related-tool:hover span {
+  color: var(--dark-text);
+}
+
+.tool-cta h2 {
+  max-width: 900px;
+}
+
+.tool-cta > .container > p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 1.5rem 0 2rem;
+  color: var(--muted-text);
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  .tool-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Footer */
 
 .site-footer {
@@ -1030,7 +1263,7 @@ textarea {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 4rem;
 }
 
@@ -1086,6 +1319,29 @@ textarea {
 }
 
 @media (max-width: 800px) {
+  .tool-hero-grid,
+  .tool-content-grid,
+  .credential-card,
+  .tool-project-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tool-hero,
+  .tool-section,
+  .tool-cta {
+    padding: 5rem 0;
+  }
+
+  .related-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .credential-copy,
+  .tool-project-copy {
+    padding: 2rem;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
