@@ -1,42 +1,33 @@
-const menuButton = document.querySelector("#menu-button");
-const siteNav = document.querySelector("#site-nav");
-const navigationLinks = document.querySelectorAll("#site-nav a");
-const currentYear = document.querySelector("#current-year");
-const revealItems = document.querySelectorAll(".reveal");
+"use strict";
 
-/* Open and close the mobile navigation */
-
-menuButton.addEventListener("click", function () {
-  siteNav.classList.toggle("open");
-
-  const menuIsOpen = siteNav.classList.contains("open");
-
-  menuButton.setAttribute("aria-expanded", menuIsOpen);
-});
-
-/* Close the menu after a navigation link is selected */
-
-navigationLinks.forEach(function (link) {
-  link.addEventListener("click", function () {
-    siteNav.classList.remove("open");
+// Navigation
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector("#navlinks");
+if (menuButton && navigation) {
+  menuButton.addEventListener("click", () => {
+    const open = navigation.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(open));
+  });
+  navigation.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+    navigation.classList.remove("open");
     menuButton.setAttribute("aria-expanded", "false");
-  });
-});
+  }));
+}
 
-/* Display the current year in the footer */
+// Footer
+const year = document.querySelector("#year");
+if (year) year.textContent = new Date().getFullYear();
 
-currentYear.textContent = new Date().getFullYear();
-
-/* Reveal sections as the visitor scrolls */
-
-const revealObserver = new IntersectionObserver(function (entries) {
-  entries.forEach(function (entry) {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-});
-
-revealItems.forEach(function (item) {
-  revealObserver.observe(item);
-});
+// Optional Google Analytics: add your GA4 measurement ID below after setup.
+const GA_MEASUREMENT_ID = "";
+if (/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) {
+  const analyticsScript = document.createElement("script");
+  analyticsScript.async = true;
+  analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_MEASUREMENT_ID)}`;
+  document.head.appendChild(analyticsScript);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID);
+  document.querySelectorAll('a[href*="calendly.com"]').forEach(link => link.addEventListener("click", () => window.gtag("event", "meeting_link_click")));
+}

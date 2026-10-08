@@ -1,296 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DK | Home </title>
-    <meta
-      name="description"
-      content="Modern, mobile-friendly websites built to help local service businesses earn trust, generate calls, and receive quote requests."
-    />
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width,initial-scale=1" name="viewport"/>
+        <meta content="Tell DK Web Solutions about your project and request a meeting." name="description"/>
+        <title>
+            Request a Meeting | DK Web Solutions
+        </title>
+        <link href="https://fonts.googleapis.com" rel="preconnect"/>
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+        <link href="../styles.css" rel="stylesheet"/>
+        <script defer="" src="../script.js">
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="wrap nav">
+                <a aria-label="DK Web Solutions home" class="brand" href="../index.html">
+                    <span class="brand-mark">
+                        DK
+                        <span>
+                            .
+                        </span>
+                    </span>
+                    <span class="brand-sub">
+                        WEB SOLUTIONS
+                    </span>
+                </a>
+                <button aria-controls="navlinks" aria-expanded="false" class="menu-toggle" type="button">
+                    Menu
+                    <span aria-hidden="true">
+                        ☰
+                    </span>
+                </button>
+                <nav aria-label="Main navigation" class="navlinks" id="navlinks">
+                    <a href="../pages/services.html">
+                        Services
+                    </a>
+                    <a href="../pages/work.html">
+                        Our work
+                    </a>
+                    <a aria-current="page" href="../pages/contact.html">
+                        Contact
+                    </a>
+                    <a class="btn btn-dark nav-cta" href="../pages/contact.html">
+                        Request a meeting
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Replace these Open Graph values with your real domain and image. -->
-    <meta property="og:title" content="DK | Web Solutions" />
-    <meta
-      property="og:description"
-      content="Modern websites designed around calls, quote requests, and customer trust."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://donovanking.com" />
-    <meta property="og:image" content="https://example.com/social-preview.jpg" />
+        <main>
+            <section class="subhero">
+                <div class="wrap narrow">
+                    <p class="kicker">
+                        GET IN TOUCH
+                    </p>
+                    <h1>
+                        Let's talk about
+                        <br/>
+                        <em>
+                            your website.
+                        </em>
+                    </h1>
+                    <p class="lead">
+                        Tell us what you're working on. We'll review your request and get in touch about a meeting.
+                    </p>
+                </div>
+            </section>
 
-    <!-- Add your favicon here: <link rel="icon" href="favicon.svg" /> -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet"
-      >
-    <link rel="stylesheet" href="../styles.css" />
+            <section class="section">
+                <div class="wrap contact-grid">
+                    <div>
+                        <p class="kicker">
+                            START A CONVERSATION
+                        </p>
+                        <h2>
+                            Tell us a little
+                            <br/>
+                            about your project.
+                        </h2>
+                        <p class="section-copy">
+                            We meet with prospective clients before accepting projects. Sending a request doesn't commit you to anything.
+                        </p>
+                        <div class="contact-detail">
+                            <span>
+                                EMAIL
+                            </span>
+                            <a href="mailto:dwasuking@gmail.com">
+                                dwasuking@gmail.com
+                            </a>
+                        </div>
 
-    <!-- Business details -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "DK | Web Solutions",
-        "url": "https://donovanking.com",
-        "email": "dwasuking@gmail.com",
-        "telephone": "+1-703-953-5515",
-        "areaServed": "Northern Virginia",
-        "description": "Online solutions and web development for professional service businesses."
-      }
-    </script>
-    <script src="script.js" defer></script>
-  </head>
-<body>
+                        <div class="contact-detail">
+                            <span>
+                                PHONE
+                            </span>
+                            <a href="tel:+17039535515">
+                                (703) 953-5515
+                            </a>
+                        </div>
 
-  <header class="site-header" id="top">
-    <div class="container nav-bar">
-      <a class="logo" href="../index.html#top">DK <span>| Web Solutions</span></a>
+                        <div class="contact-detail">
+                            <span>
+                                PREFER TO PICK A TIME?
+                            </span>
+                            <a href="https://calendly.com/dwasuking/30min" rel="noopener noreferrer" target="_blank">
+                                View meeting availability ↗
+                            </a>
+                        </div>
+                    </div>
+                    <form action="https://formsubmit.co/dwasuking@gmail.com" class="contact-form" method="POST">
+                        <input name="_subject" type="hidden" value="New DKWS meeting request"/>
+                        <input name="_captcha" type="hidden" value="true"/>
+                        <input aria-hidden="true" autocomplete="off" class="honeypot" name="_honey" tabindex="-1" type="text"/>
+                        <div class="form-row">
+                            <label>
+                                Full name
+                                <span>
+                                    *
+                                </span>
+                                <input autocomplete="name" maxlength="100" name="name" placeholder="Your name" required="" type="text"/>
+                            </label>
+                            <label>
+                                Email address
+                                <span>
+                                    *
+                                </span>
+                                <input autocomplete="email" maxlength="200" name="email" placeholder="you@business.com" required="" type="email"/>
+                            </label>
+                        </div>
 
-      <button class="menu-button" id="menu-button" aria-label="Open navigation" aria-expanded="false">
-        Menu
-      </button>
+                        <div class="form-row">
+                            <label>
+                                Business name
+                                <input maxlength="120" name="business" placeholder="Your business" type="text"/>
+                            </label>
+                            <label>
+                                Phone number
+                                <input autocomplete="tel" maxlength="30" name="phone" placeholder="Optional" type="tel"/>
+                            </label>
+                        </div>
+                        <label>
+                            What are you looking for?
+                            <span>
+                                *
+                            </span>
+                            <select name="service" required="">
+                                <option disabled="" selected="" value="">
+                                    Select a service
+                                </option>
+                                <option>
+                                    New business website
+                                </option>
+                                <option>
+                                    Website redesign
+                                </option>
+                                <option>
+                                    Website improvement
+                                </option>
+                                <option>
+                                    Not sure yet
+                                </option>
+                            </select>
+                        </label>
+                        <label>
+                            Tell us about your project
+                            <span>
+                                *
+                            </span>
+                            <textarea maxlength="3000" name="project" placeholder="What does your business do, and what would you like your website to accomplish?" required="" rows="5"></textarea>
+                        </label>
+                        <label>
+                            Preferred timeline
+                            <select name="timeline">
+                                <option>
+                                    Flexible / not sure
+                                </option>
+                                <option>
+                                    As soon as possible
+                                </option>
+                                <option>
+                                    Within 1 month
+                                </option>
+                                <option>
+                                    Within 2–3 months
+                                </option>
+                                <option>
+                                    Just exploring
+                                </option>
+                            </select>
+                        </label>
+                        <button class="btn btn-dark btn-full" type="submit">
+                            Send meeting request ↗
+                        </button>
+                        <p class="form-note">
+                            This sends an inquiry, not a confirmed appointment. We'll follow up to discuss next steps.
+                        </p>
+                        <p aria-live="polite" class="form-note" id="form-status" role="status">
+                        </p>
+                    </form>
+                </div>
+            </section>
+        </main>
 
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="services.html">Services</a>
-        <a href="../index.html#work">Work</a>
-        <a href="../index.html#process">Process</a>
-        <a href="../index.html#pricing">Pricing</a>
-        <a class="nav-button" href="https://calendly.com/dwasuking/30min">Book a Free Consultation</a>
-      </nav>
-    </div>
-  </header>
-   
-    <!-- Contact Hero -->
-    <section class="page-hero contact-hero">
-      <div class="container">
-        <p class="eyebrow">Contact</p>
-        <h1>Let’s talk about your business.</h1>
+        <footer class="footer">
+            <div class="wrap footer-top">
+                <div>
+                    <a class="brand" href="../index.html">
+                        <span class="brand-mark">
+                            DK
+                            <span>
+                                .
+                            </span>
+                        </span>
+                        <span class="brand-sub">
+                            WEB SOLUTIONS
+                        </span>
+                    </a>
+                    <p>
+                        Thoughtful websites for businesses ready to make a better first impression.
+                    </p>
+                </div>
 
-        <p class="page-intro">
-          Tell us about your business, current online presence, and what you
-          would like to improve. We will use the consultation to determine
-          whether DK Web Solutions is a good fit for your project.
-        </p>
-      </div>
-    </section>
+                <div>
+                    <strong>
+                        Explore
+                    </strong>
+                    <a href="../pages/services.html">
+                        Services
+                    </a>
+                    <a href="../pages/work.html">
+                        Our work
+                    </a>
+                    <a aria-current="page" href="../pages/contact.html">
+                        Contact
+                    </a>
+                </div>
 
-    <!-- Contact Information and Form -->
-    <section class="page-section">
-      <div class="container contact-layout">
+                <div>
+                    <strong>
+                        Get in touch
+                    </strong>
+                    <a href="mailto:dwasuking@gmail.com">
+                        dwasuking@gmail.com
+                    </a>
+                    <a href="tel:+17039535515">
+                        (703) 953-5515
+                    </a>
+                    <span>
+                        Northern Virginia · Remote projects
+                    </span>
+                </div>
+            </div>
 
-        <div class="contact-information">
-          <p class="eyebrow">Get in Touch</p>
-          <h2>Start the conversation.</h2>
-
-          <p>
-            Complete the consultation form or contact DK Web Solutions
-            directly.
-          </p>
-
-          <div class="contact-links">
-              <a href="mailto:dwasuking@gmail.com">
-                dwasuking@gmail.com
-              </a>
-              
-              <a href="tel:+17039535515">
-                (703) 953-5515
-              </a>
-          </div>
-
-          <div class="expectations">
-            <h3>What to Expect</h3>
-
-            <ul>
-              <li>We discuss your business and project goals.</li>
-              <li>We determine the necessary services and deliverables.</li>
-              <li>You receive a clear project scope and price.</li>
-              <li>Projects have a $2,000 minimum.</li>
-              <li>50% is required to begin.</li>
-              <li>The remaining 50% is required before delivery.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!--
-          This form currently uses client-side validation only.
-
-          Connect the form to Formspree, Web3Forms, or a custom backend
-          before launching it for real customer submissions.
-        -->
-        <form class="contact-form" id="consultation-form" novalidate>
-          <div class="form-heading">
-            <p class="eyebrow">Free Consultation</p>
-            <h2>Tell us about your project.</h2>
-          </div>
-
-          <div class="form-grid">
-
-            <label>
-              Name <span>*</span>
-              <input
-                type="text"
-                name="name"
-                autocomplete="name"
-                required
-              >
-            </label>
-
-            <label>
-              Business name <span>*</span>
-              <input
-                type="text"
-                name="business"
-                autocomplete="organization"
-                required
-              >
-            </label>
-
-            <label>
-              Email <span>*</span>
-              <input
-                type="email"
-                name="email"
-                autocomplete="email"
-                required
-              >
-            </label>
-
-            <label>
-              Phone number
-              <input
-                type="tel"
-                name="phone"
-                autocomplete="tel"
-              >
-            </label>
-
-            <label class="full-field">
-              Current website URL
-              <input
-                type="url"
-                name="website"
-                placeholder="https://"
-              >
-            </label>
-
-            <label class="full-field">
-              Type of service business <span>*</span>
-
-              <select name="businessType" required>
-                <option value="" selected disabled>
-                  Select your industry
-                </option>
-                <option value="cleaning">Cleaning</option>
-                <option value="landscaping">Landscaping</option>
-                <option value="contracting">Contracting</option>
-                <option value="pressure-washing">Pressure washing</option>
-                <option value="auto-detailing">Auto detailing</option>
-                <option value="other">Other local service</option>
-              </select>
-            </label>
-
-            <label class="full-field">
-              Project details <span>*</span>
-
-              <textarea
-                name="details"
-                rows="6"
-                placeholder="Tell us what you need help with."
-                required
-              ></textarea>
-            </label>
-
-          </div>
-
-          <button class="button button-wide" type="submit">
-            Request My Consultation
-          </button>
-
-          <p
-            class="form-status"
-            id="form-status"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </form>
-
-      </div>
-    </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-
-      <div class="footer-brand">
-        <a class="logo" href="index.html">
-          DK | Web Solutions
-        </a>
-
-        <p>
-          Websites and growth systems for local service businesses.
-        </p>
-
-        <a href="mailto:hello@dkwebsolutions.com">
-          hello@dkwebsolutions.com
-        </a>
-
-        <a href="tel:+17039535515">
-          (703) 953-5515
-        </a>
-      </div>
-
-      <div class="footer-links">
-        <h3>Website</h3>
-        <a href="../index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <div class="footer-links">
-        <h3>Services</h3>
-        <a href="services.html#websites">Website Development</a>
-        <a href="services.html#content">Content Creation</a>
-        <a href="services.html#advertising">Advertising</a>
-        <a href="services.html#analytics">Analytics</a>
-      </div>
-
-      <div class="footer-links">
-        <h3>Packages</h3>
-        <a href="services.html#website-startup">Website Startup</a>
-        <a href="services.html#growth-ready">Growth-Ready Website</a>
-        <a href="services.html#retainers">Growth Operations</a>
-        <a href="contact.html">Request a Consultation</a>
-      </div>
-
-      <div class="footer-links">
-        <h3>Tools</h3>
-          <a  href="tools/html5.html">HTML5</a>               
-          <a  href="tools/css3.html">CSS3</a>    
-          <a  href="tools/javascript.html">JavaScript</a>
-          <a  href="tools/github.html">GitHub</a>
-          <a  href="tools/vercel.html">Vercel</a>
-          <a  href="tools/google-analytics.html">Google Analytics</a>
-          <a  href="tools/google-business-profile.html">Google Business Profile</a>
-          <a  href="tools/meta-pixel.html">Meta Pixel</a>
-          <a  href="tools/google-ads.html">Google Ads</a>
-          <a  href="tools/meta-ads-manager.html">Meta Ads Manager</a>
-          <a  href="tools/premiere-pro.html">Adobe Premiere Pro</a>
-          <a  href="tools/after-effects.html"> Adobe After Effects</a>
-      </div>
-
-    </div>
-
-    <div class="container footer-bottom">
-      <span>
-        © <span id="current-year"></span> DK | Web Solutions
-      </span>
-
-      <a href="pages/privacy.html">Privacy Policy</a>
-    </div>
-  </footer>
-</body>
+            <div class="wrap footer-bottom">
+                <span>
+                    ©
+                    <span id="year">
+                    </span>
+                    DK Web Solutions
+                </span>
+                <span>
+                    Built with intention.
+                </span>
+            </div>
+        </footer>
+    </body>
 </html>
